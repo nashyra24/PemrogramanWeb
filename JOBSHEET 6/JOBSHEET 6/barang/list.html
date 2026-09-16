@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Daftar Anggota</title>
+    <title>SITARIS HMTI | Daftar Barang</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>SIMPUS-Mini</h1>
+        <h1>SITARIS HMTI</h1>
+        <!-- Tombol hamburger asli (JS-driven) -->
         <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="../index.html">Beranda</a></li>
-                <li><a href="../buku/list.html">Daftar Buku</a></li>
-                <li><a href="../buku/tambah.html">Tambah Buku</a></li>
-                <li><a href="list.html">Daftar Anggota</a></li>
-                <li><a href="tambah.html">Tambah Anggota</a></li>
+                <li><a href="list.html">Daftar Barang</a></li>
+                <li><a href="tambah.html">Tambah Barang</a></li>
+                <li><a href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="../peminjam/tambah.html">Tambah Peminjam</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>Daftar Anggota</h2>
-
-            <!-- Kolom Pencarian di luar table-responsive -->
+            <h2>Daftar Barang</h2>      
+            
+            <!-- Kolom Pencarian dibungkus div class search-box di luar tabel -->
             <div class="search-box">
                 <p id="table-counter" style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;"></p>
                 <label for="search-input">Cari</label>
@@ -38,10 +39,11 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>No. Anggota</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>No. HP</th>
+                            <th>Nama Barang</th>
+                            <th>Kategori</th>
+                            <th>Kondisi</th>
+                            <th>Status</th>
+                            <th>Jumlah</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -54,11 +56,11 @@
     </main>
 
     <footer>
-        <p>© 2026 SIMPUS-Mini — Jobsheet 1</p>
+        <p>© 2026 SITARIS HMTI</p>
     </footer>
 
-    <!-- Perhatikan tanda ../ -->
+    <!-- Tag script JS -->
     <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/anggota.js"></script>
+    <script src="../assets/js/barang.js"></script>
 </body>
 </html>

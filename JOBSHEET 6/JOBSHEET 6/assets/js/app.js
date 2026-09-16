@@ -8,18 +8,18 @@ function initNavToggle() {
     });
 }
 
-// ===== 2. Konfirmasi hapus =====
+// Memakai event delegation di document karena baris tabel dirender dinamis
 function initHapusConfirm() {
-    document.querySelectorAll(".btn-hapus").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-            const row = btn.closest("tr");
-            const nama = row ? row.querySelector("td")?.textContent : "data ini";
-            const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
-            if (yakin && row) {
-                row.remove();
-                updateTableCounter();
-            }
-        });
+    document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".btn-hapus");
+        if (!btn) return;
+
+        const row = btn.closest("tr");
+        const nama = row ? row.querySelector("td")?.textContent : "data ini";
+        const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
+        if (yakin && row) {
+            row.remove();
+        }
     });
 }
 
@@ -34,10 +34,9 @@ function initTableFilter() {
         const rows = table.querySelectorAll("tbody tr");
 
         rows.forEach(function (row) {
-            // Mengambil hanya kolom pertama (td pertama) dari tiap baris
-            const kolomUtama = row.querySelector("td");
-            const teks = kolomUtama ? kolomUtama.textContent.toLowerCase() : "";
-            row.style.display = teks.includes(keyword) ? "" : "none";
+            // Memeriksa seluruh teks di dalam satu baris (semua kolom)
+            const teksBaris = row.textContent.toLowerCase();
+            row.style.display = teksBaris.includes(keyword) ? "" : "none";
         });
 
         updateTableCounter();
@@ -68,7 +67,7 @@ function initValidasiForm() {
         let valid = true;
 
         // Daftar field wajib isi
-        const fieldWajib = ["Nama Barang", "Peminjam", "Tanggal Dipinjam", "Tanggal Dikembalikan"];
+        const fieldWajib = ["nama_barang", "nama", "nim"];
 
         fieldWajib.forEach(function (namaField) {
             const input = form.querySelector("[name='" + namaField + "']");
@@ -82,27 +81,15 @@ function initValidasiForm() {
             }
         });
 
-        // Validasi khusus angka (Tahun)
-        const tahun = form.querySelector("[name='tahun']");
-        if (tahun) {
-            const nilai = parseInt(tahun.value, 10);
-            if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
-                tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
-                valid = false;
-            } else {
-                hapusError(tahun);
-            }
-        }
-
-        // Validasi khusus angka (Stok)
-        const stok = form.querySelector("[name='stok']");
-        if (stok) {
-            const nilai = parseInt(stok.value, 10);
+        // Validasi khusus angka (Jumlah)
+        const jumlah = form.querySelector("[name='jumlah']");
+        if (jumlah) {
+            const nilai = parseInt(jumlah.value, 10);
             if (isNaN(nilai) || nilai < 0) {
-                tampilkanError(stok, "Stok tidak boleh bernilai negatif.");
+                tampilkanError(jumlah, "Jumlah tidak boleh bernilai negatif.");
                 valid = false;
             } else {
-                hapusError(stok);
+                hapusError(jumlah);
             }
         }
 

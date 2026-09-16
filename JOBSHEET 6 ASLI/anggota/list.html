@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Daftar Buku</title>
+    <title>Sistem Inventaris</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>SIMPUS-Mini</h1>
-        <!-- Tombol hamburger asli (JS-driven) -->
+        <h1>SITARIS HMTI</h1>
         <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="../index.html">Beranda</a></li>
-                <li><a href="list.html">Daftar Buku</a></li>
-                <li><a href="tambah.html">Tambah Buku</a></li>
-                <li><a href="../anggota/list.html">Daftar Anggota</a></li>
-                <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+                <li><a href="../buku/list.html">Daftar Barang</a></li>
+                <li><a href="../buku/tambah.html">Tambah Barang</a></li>
+                <li><a href="list.html">Daftar Peminjam</a></li>
+                <li><a href="tambah.html">Tambah Peminjam</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>Daftar Buku</h2>      
-            
-            <!-- Kolom Pencarian dibungkus div class search-box di luar tabel -->
+            <h2>Daftar Peminjam</h2>
+
+            <!-- Kolom Pencarian di luar table-responsive -->
             <div class="search-box">
                 <p id="table-counter" style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;"></p>
                 <label for="search-input">Cari</label>
@@ -39,10 +38,10 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Judul</th>
-                            <th>Pengarang</th>
-                            <th>Tahun</th>
-                            <th>Stok</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Nama OKI</th>
+                            <th>No. HP</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -55,11 +54,11 @@
     </main>
 
     <footer>
-        <p>© 2026 SIMPUS-Mini — Jobsheet 1</p>
+        <p>© 2026 SITARIS HMTI</p>
     </footer>
 
-    <!-- Tag script JS -->
+    <!-- Perhatikan tanda ../ -->
     <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/buku.js"></script>
+    <script src="../assets/js/anggota.js"></script>
 </body>
 </html>
