@@ -1,13 +1,13 @@
 [Petugas Login] -> [Dashboard] -> [Pilih menu "Peminjaman Baru"]
-        -> [Pilih Anggota] -> [Pilih Buku (stok > 0)]
-        -> [Simpan] -> [Stok buku berkurang 1] -> [Kembali ke Dashboard]
+        -> [Pilih Peminjam] -> [Pilih Barang (jumlah > 0)]
+        -> [Simpan] -> [Jumlah barang berkurang 1] -> [Kembali ke Dashboard]
 
-[Dashboard] -> [Menu "Pengembalian"] -> [Cari transaksi aktif (anggota/buku)]
-        -> [Tandai "Dikembalikan"] -> [Stok buku bertambah 1]
+[Dashboard] -> [Menu "Pengembalian"] -> [Cari transaksi aktif (peminjam/barang)]
+        -> [Tandai "Dikembalikan"] -> [Jumlah barang bertambah 1]
         -> [Kembali ke Dashboard]
 
 +--------------------------------------+
-|              SIMPUS-Mini             |
+|             SITARIS HMTI             |
 |--------------------------------------|
 |                                      |
 |        [ Login Petugas ]            |
@@ -21,41 +21,41 @@
 +--------------------------------------+
 
 +-----------------------------------------------------+
-| SIMPUS-Mini      Beranda | Buku | Anggota | Peminjaman | (Nama Petugas) Logout |
+| SITARIS HMTI   Beranda | Barang | Peminjam | Peminjaman | (Nama Petugas) Logout |
 |-------------------------------------------------------|
-|  [Total Buku]   [Total Anggota]   [Sedang Dipinjam]    |
+|  [Total Barang]   [Total Peminjam]   [Sedang Dipinjam]  |
 |                                                         |
 |  Aksi Cepat:                                           |
 |  [ + Peminjaman Baru ]   [ + Pengembalian ]            |
 |                                                         |
 |  Transaksi Terbaru                                     |
 |  --------------------------------------------------    |
-|  Anggota | Buku | Tgl Pinjam | Status                  |
+|  Peminjam | Barang | Tgl Pinjam | Status               |
 +-----------------------------------------------------+
 
 +--------------------------------------+
-|  Form Peminjaman Buku                |
+|  Form Peminjaman Barang              |
 |--------------------------------------|
-|  Anggota : [ dropdown pilih anggota ]|
-|  Buku    : [ dropdown, hanya stok>0 ]|
+|  Peminjam : [ dropdown pilih peminjam]|
+|  Barang   : [ dropdown, jumlah>0 ]   |
 |  Tanggal Pinjam : [ auto: hari ini ] |
 |                                      |
 |          [  Simpan Peminjaman  ]    |
 +--------------------------------------+
 
 +--------------------------------------+
-|  Pengembalian Buku                   |
+|  Pengembalian Barang                 |
 |--------------------------------------|
 |  Cari transaksi aktif:               |
-|  [ nama anggota / judul buku ______ ]|
+|  [ nama peminjam / nama barang ____ ]|
 |                                      |
-|  Anggota | Buku | Tgl Pinjam | [Kembalikan] |
+|  Peminjam | Barang | Tgl Pinjam | [Kembalikan] |
 +--------------------------------------+
 
 +--------------------------------------+
 |  Riwayat Peminjaman — Siti Aminah    |
 |--------------------------------------|
-|  Buku            | Pinjam   | Kembali | Status      |
-|  Laskar Pelangi   | 01/07    | 10/07   | Selesai     |
-|  Bumi Manusia      | 15/07    | -       | Dipinjam    |
+|  Barang             | Pinjam   | Kembali | Status    |
+|  Laptop             | 01/07    | 10/07   | Selesai   |
+|  Sound System       | 15/07    | -       | Dipinjam  |
 +--------------------------------------+

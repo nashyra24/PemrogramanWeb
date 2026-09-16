@@ -67,7 +67,7 @@ function initValidasiForm() {
         let valid = true;
 
         // Daftar field wajib isi
-        const fieldWajib = ["judul", "nama", "pengarang", "no_anggota"];
+        const fieldWajib = ["nama_barang", "nama", "nim"];
 
         fieldWajib.forEach(function (namaField) {
             const input = form.querySelector("[name='" + namaField + "']");
@@ -81,27 +81,15 @@ function initValidasiForm() {
             }
         });
 
-        // Validasi khusus angka (Tahun)
-        const tahun = form.querySelector("[name='tahun']");
-        if (tahun) {
-            const nilai = parseInt(tahun.value, 10);
-            if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
-                tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
-                valid = false;
-            } else {
-                hapusError(tahun);
-            }
-        }
-
-        // Validasi khusus angka (Stok)
-        const stok = form.querySelector("[name='stok']");
-        if (stok) {
-            const nilai = parseInt(stok.value, 10);
+        // Validasi khusus angka (Jumlah)
+        const jumlah = form.querySelector("[name='jumlah']");
+        if (jumlah) {
+            const nilai = parseInt(jumlah.value, 10);
             if (isNaN(nilai) || nilai < 0) {
-                tampilkanError(stok, "Stok tidak boleh bernilai negatif.");
+                tampilkanError(jumlah, "Jumlah tidak boleh bernilai negatif.");
                 valid = false;
             } else {
-                hapusError(stok);
+                hapusError(jumlah);
             }
         }
 
