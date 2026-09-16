@@ -67,7 +67,7 @@ function initValidasiForm() {
         let valid = true;
 
         // Daftar field wajib isi
-        const fieldWajib = ["Nama Barang", "Peminjam", "Tanggal Dipinjam", "Tanggal Dikembalikan"];
+        const fieldWajib = ["judul", "nama", "pengarang", "no_anggota"];
 
         fieldWajib.forEach(function (namaField) {
             const input = form.querySelector("[name='" + namaField + "']");
