@@ -1,6 +1,8 @@
 <?php
+session_start(); // 1. Wajib dipanggil di baris paling atas
+
 $page_title = "SITARIS HMTI | Daftar Peminjam";
-include '../header.php';
+include 'layouts/header.php';
 
 $peminjamList = $_SESSION['peminjam'] ?? [];
 $flash = $_SESSION['flash'] ?? null;
@@ -46,4 +48,4 @@ unset($_SESSION['flash']);
     </section>
 </main>
 
-<?php include '../footer.php'; ?>
+<?php include 'layouts/footer.php'; // 2. Dibenahi menjadi footer.php ?>
