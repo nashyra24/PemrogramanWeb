@@ -60,7 +60,7 @@
     </main>
 
     <footer>
-        <p>© <?php echo date('Y'); ?> SITARIS HMTI — Jobsheet 6</p>
+        <p>© <?php echo date('Y'); ?> SITARIS HMTI — Jobsheet 7</p>
     </footer>
 
     <!-- Penambahan script js -->
