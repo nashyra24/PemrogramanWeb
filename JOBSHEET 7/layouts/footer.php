@@ -3,7 +3,7 @@
 $base_url = (basename(dirname($_SERVER['PHP_SELF'])) == 'barang' || basename(dirname($_SERVER['PHP_SELF'])) == 'peminjam') ? '../' : './';
 ?>
     <footer>
-        <p>© <?php echo date('Y'); ?> SITARIS HMTI — Jobsheet 6</p>
+        <p>© <?php echo date('Y'); ?> SITARIS HMTI — Jobsheet 7</p>
     </footer>
 
     <!-- Script JS -->
