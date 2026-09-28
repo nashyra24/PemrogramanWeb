@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SITARIS HMTI | Tambah Peminjam</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SITARIS HMTI</h1>
+        <!-- Tombol hamburger -->
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../barang/list.html">Daftar Barang</a></li>
+                <li><a href="../barang/tambah.html">Tambah Barang</a></li>
+                <li><a href="list.html">Daftar Peminjam</a></li>
+                <li><a href="tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Peminjam</h2>
+            <!-- Form diarahkan ke proses PHP menggunakan atribut action dan method -->
+            <form id="form-tambah" action="" method="POST" novalidate>
+                <p> 
+                    <label for="nim">NIM</label><br> 
+                    <input type="text" id="nim" name="nim" required> 
+                </p> 
+                 
+                <p> 
+                    <label for="nama">Nama</label><br> 
+                    <input type="text" id="nama" name="nama" required> 
+                </p> 
+                 
+                <p> 
+                    <label for="oki">Nama OKI</label><br> 
+                    <select id="oki" name="oki"> 
+                        <option value="HMTK">HMTK</option> 
+                        <option value="HMA">HMA</option> 
+                        <option value="PL FM">PL FM</option> 
+                        <option value="BEM">BEM</option> 
+                    </select> 
+                </p> 
+                 
+                <p> 
+                    <label for="no_hp">No. HP</label><br> 
+                    <input type="text" id="no_hp" name="no_hp"> 
+                </p> 
+                 
+                <p> 
+                    <button type="submit" name="submit">Simpan</button> 
+                </p> 
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <?php echo date('Y'); ?> SITARIS HMTI — Jobsheet 7</p>
+    </footer>
+
+    <!-- Penambahan script js -->
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
