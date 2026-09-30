@@ -8,7 +8,14 @@ function initNavToggle() {
     });
 }
 
-// Memakai event delegation di document karena baris tabel dirender dinamis
+// Event delegation dipakai supaya tetap aman untuk perubahan struktur
+// tabel di masa depan. [CATATAN] Komentar lama menyebut baris tabel
+// "dirender dinamis via fetch (barang.js/peminjam.js)" — sejak Jobsheet 8
+// baris dirender server-side oleh PHP dari database (meniru referensi),
+// jadi barang.js & peminjam.js (versi fetch JSON) sudah tidak dipakai
+// dan dihapus dari project (tersimpan di backup user).
+// Logika hapus masih sekadar row.remove() di DOM (belum ke server),
+// sama persis seperti kondisi referensi saat ini.
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-hapus");

@@ -346,6 +346,29 @@ form button[type="submit"]:active {
   font-weight: 500;
 }
 
+/* =====================================================================
+   [FLASH MESSAGE — ada di referensi] Class .flash/.flash-success/
+   .flash-error memang terdapat di style.css referensi; ditambahkan di
+   sini mengikuti nama class tersebut, dengan warna yang selaras palet
+   project. Dipakai halaman list.php & tambah.php (barang & peminjam).
+   ===================================================================== */
+.flash {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.flash-success {
+  background-color: #dcfce7;
+  color: #14532d;
+}
+
+.flash-error {
+  background-color: #fee2e2;
+  color: #7f1d1d;
+}
+
 /* Loading Indicator */
 #loading-indicator {
   font-size: 0.9rem;
