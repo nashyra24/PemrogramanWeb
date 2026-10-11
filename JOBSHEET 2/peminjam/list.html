@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<!-- Deklarasi dokumen HTML5 -->
+<html lang="id"> <!-- Bahasa halaman: Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Agar karakter khusus tampil benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsif di HP -->
+    <title>SITARIS HMTI | Daftar Peminjam</title> <!-- Judul di tab browser -->
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+    <!-- ===== HEADER: judul aplikasi + menu ===== -->
+    <header>
+        <h1>SITARIS HMTI</h1>
+        <!-- Tombol hamburger, dikendalikan app.js lewat id -->
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+        <!-- Menu navigasi ke semua halaman -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../barang/list.html">Daftar Barang</a></li>
+                <li><a href="../barang/tambah.html">Tambah Barang</a></li>
+                <li><a href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== ISI UTAMA HALAMAN ===== -->
     <main>
         <section>
             <h2>Daftar Peminjam</h2>
@@ -39,3 +67,12 @@
             </div>
         </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 SITARIS HMTI &mdash; Jobsheet 8</p>
+    </footer>
+    <!-- Memuat JavaScript (menu, pencarian, hapus, validasi) -->
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
