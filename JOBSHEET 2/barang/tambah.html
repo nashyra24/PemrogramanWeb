@@ -11,7 +11,7 @@
     <!-- ===== HEADER: judul aplikasi + menu ===== -->
     <header>
         <h1>SITARIS HMTI</h1>
-        <!-- Tombol hamburger, dikendalikan app.js lewat id -->
+        <!-- Tombol hamburger (butuh JavaScript untuk berfungsi) -->
         <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
         <!-- Menu navigasi ke semua halaman -->
         <nav>
@@ -30,7 +30,7 @@
         <section>
             <h2>Tambah Barang</h2>
 
-            <!-- Form kirim data (POST) ke proses_tambah.php; id dipakai validasi app.js -->
+            <!-- Form kirim data (POST) ke proses_tambah.php -->
             <form id="form-tambah" method="post" action="proses_tambah.php">
                 <p>
                     <label for="nama_barang">Nama Barang</label><br>
@@ -78,7 +78,5 @@
     <footer>
         <p>&copy; 2026 SITARIS HMTI &mdash; Jobsheet 8</p>
     </footer>
-    <!-- Memuat JavaScript (menu, pencarian, hapus, validasi) -->
-    <script src="../assets/js/app.js"></script>
 </body>
 </html>
