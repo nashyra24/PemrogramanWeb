@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Deklarasi dokumen HTML5 -->
+<html lang="id"> <!-- Bahasa halaman: Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Agar karakter khusus tampil benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsif di HP -->
+    <title>SITARIS HMTI | Tambah Barang</title> <!-- Judul di tab browser -->
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+    <!-- ===== HEADER: judul aplikasi + menu ===== -->
+    <header>
+        <h1>SITARIS HMTI</h1>
+        <!-- HAMBURGER TANPA JAVASCRIPT (checkbox hack).
+             Checkbox disembunyikan; label adalah tombol ☰ yang terlihat.
+             Mengklik label = mencentang checkbox (lewat for="nav-toggle").
+             CSS lalu membaca :checked untuk membuka menu. Hanya aktif di layar <= 480px.
+             Urutan wajib: input -> label -> nav (CSS memakai + dan ~ yang hanya membaca elemen SETELAH checkbox) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Buka menu">&#9776;</label>
+        <!-- Menu navigasi ke semua halaman -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../barang/list.html">Daftar Barang</a></li>
+                <li><a href="../barang/tambah.html">Tambah Barang</a></li>
+                <li><a href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== ISI UTAMA HALAMAN ===== -->
+    <main>
+        <section>
+            <h2>Tambah Barang</h2>
+
+            <!-- Form kirim data (POST) ke proses_tambah.php -->
+            <form id="form-tambah" method="post" action="proses_tambah.php">
+                <p>
+                    <label for="nama_barang">Nama Barang</label><br>
+                    <!-- name = nama data yang diterima PHP; required = wajib diisi -->
+                    <input type="text" id="nama_barang" name="nama_barang" required>
+                </p>
+                <p>
+                    <label for="kategori">Kategori</label><br>
+                    <!-- Dropdown: value dikirim ke server, teks dilihat pengguna -->
+                    <select id="kategori" name="kategori">
+                        <option value="elektronik">Elektronik</option>
+                        <option value="furnitur">Furnitur</option>
+                        <option value="alat-kebersihan">Alat Kebersihan</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="kondisi">Kondisi</label><br>
+                    <select id="kondisi" name="kondisi">
+                        <option value="baik">Baik</option>
+                        <option value="rusak">Rusak</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="status">Status</label><br>
+                    <select id="status" name="status">
+                        <option value="tersedia">Tersedia</option>
+                        <option value="dipinjam">Dipinjam</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="jumlah">Jumlah</label><br>
+                    <!-- Input angka, minimal 0 (tidak boleh negatif) -->
+                    <input type="number" id="jumlah" name="jumlah" min="0" required>
+                </p>
+                <p>
+                    <!-- Tombol kirim form -->
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 SITARIS HMTI &mdash; Jobsheet 2</p>
+    </footer>
+</body>
+</html>

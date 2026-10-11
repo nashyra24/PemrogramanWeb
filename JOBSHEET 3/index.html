@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>SIMPUS-Mini | Beranda</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <header>
-            <h1>SIMPUS-Mini</h1>
-            <!-- Tombol Hamburger Baru (JS-driven) -->
-            <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="buku/list.html">Daftar Buku</a></li>
-                    <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                    <li><a href="anggota/list.html">Daftar Anggota</a></li>
-                    <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
-                <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-            </section>
-            
-            <section>
-                <h2>Ringkasan</h2>
-                <article>
-                    <h3>Total Buku</h3>
-                    <p>12</p>
-                </article>
-                <article>
-                    <h3>Total Anggota</h3>
-                    <p>8</p>
-                </article>
-                <article>
-                    <h3>Sedang Dipinjam</h3>
-                    <p>3</p>
-                </article>
-                <article>
-                    <h3>Buku Terlambat</h3>
-                    <p>1</p>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <p>© 2026 SIMPUS-Mini — Jobsheet</p>
-        </footer>
+<!-- Deklarasi dokumen HTML5 -->
+<html lang="id"> <!-- Bahasa halaman: Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Agar karakter khusus tampil benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsif di HP -->
+    <title>SITARIS HMTI | Beranda</title> <!-- Judul di tab browser -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+    <!-- ===== HEADER: judul aplikasi + menu ===== -->
+    <header>
+        <h1>SITARIS HMTI</h1>
+        <!-- HAMBURGER TANPA JAVASCRIPT (checkbox hack).
+             Checkbox disembunyikan; label adalah tombol ☰ yang terlihat.
+             Mengklik label = mencentang checkbox (lewat for="nav-toggle").
+             CSS lalu membaca :checked untuk membuka menu. Hanya aktif di layar <= 480px.
+             Urutan wajib: input -> label -> nav (CSS memakai + dan ~ yang hanya membaca elemen SETELAH checkbox) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Buka menu">&#9776;</label>
+        <!-- Menu navigasi ke semua halaman -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="barang/list.html">Daftar Barang</a></li>
+                <li><a href="barang/tambah.html">Tambah Barang</a></li>
+                <li><a href="peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="peminjam/tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Tag Script JS -->
-        <script src="assets/js/app.js"></script>
-    </body>
+    <!-- ===== ISI UTAMA HALAMAN ===== -->
+    <main>
+        <!-- Bagian sambutan -->
+        <section>
+            <h2>Selamat Datang di SITARIS HMTI</h2>
+            <p>Aplikasi sederhana untuk mengelola data barang dan peminjam organisasi HMTI.</p>
+        </section>
+
+        <!-- Bagian ringkasan: 3 kartu statistik (angka contoh, aslinya dari database) -->
+        <section>
+            <h2>Ringkasan</h2>
+            <div class="dashboard-grid"> <!-- Menata kartu berjajar -->
+                <div class="card-stat"> <!-- Satu kartu -->
+                    <h3>Total Barang</h3>
+                    <p>0</p>
+                </div>
+                <div class="card-stat">
+                    <h3>Total Peminjam</h3>
+                    <p>0</p>
+                </div>
+                <div class="card-stat">
+                    <h3>Sedang Dipinjam</h3>
+                    <p>0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 SITARIS HMTI &mdash; Jobsheet 2</p>
+    </footer>
+</body>
 </html>

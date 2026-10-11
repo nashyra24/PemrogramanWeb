@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Deklarasi dokumen HTML5 -->
+<html lang="id"> <!-- Bahasa halaman: Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Agar karakter khusus tampil benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsif di HP -->
+    <title>SITARIS HMTI | Daftar Peminjam</title> <!-- Judul di tab browser -->
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+    <!-- ===== HEADER: judul aplikasi + menu ===== -->
+    <header>
+        <h1>SITARIS HMTI</h1>
+        <!-- HAMBURGER TANPA JAVASCRIPT (checkbox hack).
+             Checkbox disembunyikan; label adalah tombol ☰ yang terlihat.
+             Mengklik label = mencentang checkbox (lewat for="nav-toggle").
+             CSS lalu membaca :checked untuk membuka menu. Hanya aktif di layar <= 480px.
+             Urutan wajib: input -> label -> nav (CSS memakai + dan ~ yang hanya membaca elemen SETELAH checkbox) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Buka menu">&#9776;</label>
+        <!-- Menu navigasi ke semua halaman -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../barang/list.html">Daftar Barang</a></li>
+                <li><a href="../barang/tambah.html">Tambah Barang</a></li>
+                <li><a href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== ISI UTAMA HALAMAN ===== -->
+    <main>
+        <section>
+            <h2>Daftar Peminjam</h2>
+
+            <!-- Kotak pencarian (butuh JavaScript untuk berfungsi) -->
+            <div class="search-box">
+                <p id="table-counter" style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;"></p> <!-- Penghitung data -->
+                <label for="search-input">Cari</label>
+                <input type="text" id="search-input" placeholder="Ketik kata kunci..."> <!-- Kolom ketik untuk filter -->
+            </div>
+
+            <!-- Pembungkus agar tabel bisa digeser di layar kecil -->
+            <div class="table-responsive">
+            <table>
+                <!-- Judul kolom -->
+                <thead>
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>OKI</th>
+                        <th>No. HP</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <!-- Isi data: 1 baris (tr) = 1 peminjam (data contoh) -->
+                <tbody>
+                    <tr>
+                        <td>2441720001</td>
+                        <td>Contoh Nama</td>
+                        <td>HMTK</td>
+                        <td>081234567890</td>
+                        <td>
+                            <button type="button">Edit</button> <!-- Belum berfungsi -->
+                            <button type="button" class="btn-hapus">Hapus</button> <!-- Konfirmasi lalu hapus baris -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 SITARIS HMTI &mdash; Jobsheet 2</p>
+    </footer>
+</body>
+</html>
