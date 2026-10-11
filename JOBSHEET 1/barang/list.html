@@ -1,0 +1,54 @@
+    <main>
+        <section>
+            <h2>Daftar Barang</h2>
+
+            <!-- Kotak pencarian: diisi/diatur oleh app.js -->
+            <div class="search-box">
+                <p id="table-counter" style="font-size: 0.9rem; color: #555; margin-bottom: 0.5rem;"></p> <!-- Penghitung data -->
+                <label for="search-input">Cari</label>
+                <input type="text" id="search-input" placeholder="Ketik kata kunci..."> <!-- Kolom ketik untuk filter -->
+            </div>
+
+            <!-- Pembungkus agar tabel bisa digeser di layar kecil -->
+            <div class="table-responsive">
+            <table>
+                <!-- Judul kolom -->
+                <thead>
+                    <tr>
+                        <th>Nama Barang</th>
+                        <th>Kategori</th>
+                        <th>Kondisi</th>
+                        <th>Status</th>
+                        <th>Jumlah</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <!-- Isi data: 1 baris (tr) = 1 barang (data contoh) -->
+                <tbody>
+                    <tr>
+                        <td>Proyektor</td>
+                        <td>elektronik</td>
+                        <td>baik</td>
+                        <td>tersedia</td>
+                        <td>2</td>
+                        <td>
+                            <button type="button">Edit</button> <!-- Belum berfungsi -->
+                            <button type="button" class="btn-hapus">Hapus</button> <!-- Konfirmasi lalu hapus baris -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kursi Lipat</td>
+                        <td>furnitur</td>
+                        <td>baik</td>
+                        <td>dipinjam</td>
+                        <td>20</td>
+                        <td>
+                            <button type="button">Edit</button> <!-- Belum berfungsi -->
+                            <button type="button" class="btn-hapus">Hapus</button> <!-- Konfirmasi lalu hapus baris -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </main>

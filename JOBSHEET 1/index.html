@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Deklarasi dokumen HTML5 -->
+<html lang="id"> <!-- Bahasa halaman: Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Agar karakter khusus tampil benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsif di HP -->
+    <title>SITARIS HMTI | Beranda</title> <!-- Judul di tab browser -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+    <!-- ===== HEADER: judul aplikasi + menu ===== -->
+    <header>
+        <h1>SITARIS HMTI</h1>
+        <!-- Tombol hamburger, dikendalikan app.js lewat id -->
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+        <!-- Menu navigasi ke semua halaman -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="barang/list.html">Daftar Barang</a></li>
+                <li><a href="barang/tambah.html">Tambah Barang</a></li>
+                <li><a href="peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="peminjam/tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== ISI UTAMA HALAMAN ===== -->
+    <main>
+        <!-- Bagian sambutan -->
+        <section>
+            <h2>Selamat Datang di SITARIS HMTI</h2>
+            <p>Aplikasi sederhana untuk mengelola data barang dan peminjam organisasi HMTI.</p>
+        </section>
+
+        <!-- Bagian ringkasan: 3 kartu statistik (angka contoh, aslinya dari database) -->
+        <section>
+            <h2>Ringkasan</h2>
+            <div class="dashboard-grid"> <!-- Menata kartu berjajar -->
+                <div class="card-stat"> <!-- Satu kartu -->
+                    <h3>Total Barang</h3>
+                    <p>0</p>
+                </div>
+                <div class="card-stat">
+                    <h3>Total Peminjam</h3>
+                    <p>0</p>
+                </div>
+                <div class="card-stat">
+                    <h3>Sedang Dipinjam</h3>
+                    <p>0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 SITARIS HMTI &mdash; Jobsheet 8</p>
+    </footer>
+    <!-- Memuat JavaScript (menu, pencarian, hapus, validasi) -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

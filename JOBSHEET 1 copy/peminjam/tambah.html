@@ -1,0 +1,38 @@
+    <main>
+        <section>
+            <h2>Tambah Peminjam</h2>
+
+            <!-- Form kirim data (POST) ke proses_tambah.php; id dipakai validasi app.js -->
+            <form id="form-tambah" method="post" action="proses_tambah.php">
+                <p>
+                    <label for="nim">NIM</label><br>
+                    <!-- name = nama data yang diterima PHP; required = wajib diisi -->
+                    <input type="text" id="nim" name="nim" required>
+                </p>
+                <p>
+                    <label for="nama">Nama</label><br>
+                    <input type="text" id="nama" name="nama" required>
+                </p>
+                <p>
+                    <label for="oki">Nama OKI</label><br>
+                    <!-- Dropdown organisasi asal peminjam -->
+                    <select id="oki" name="oki">
+                        <option value="HMTK">HMTK</option>
+                        <option value="HMA">HMA</option>
+                        <option value="PL FM">PL FM</option>
+                        <option value="BEM">BEM</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="no_hp">No. HP</label><br>
+                    <!-- Opsional (tanpa required) -->
+                    <input type="text" id="no_hp" name="no_hp">
+                </p>
+                <p>
+                    <!-- Tombol kirim form -->
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    
