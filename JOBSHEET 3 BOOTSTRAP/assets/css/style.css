@@ -1,0 +1,17 @@
+/* style.css — hanya override warna brand di atas Bootstrap (dimuat SETELAH bootstrap.min.css) */
+:root {
+  --bs-primary: #4f46e5;            /* warna utama brand */
+  --bs-primary-rgb: 79, 70, 229;    /* versi RGB, dipakai class seperti border-primary */
+  --bs-link-color: #4f46e5;
+  --bs-link-hover-color: #4338ca;
+}
+
+/* Latar navbar: indigo gelap */
+.navbar { background-color: #1e1b4b; }
+
+/* Tombol .btn-primary mengikuti warna brand (Bootstrap 5.3 memakai variabel --bs-btn-*) */
+.btn-primary {
+  --bs-btn-bg: #4f46e5;           --bs-btn-border-color: #4f46e5;
+  --bs-btn-hover-bg: #4338ca;     --bs-btn-hover-border-color: #4338ca;
+  --bs-btn-active-bg: #4338ca;    --bs-btn-active-border-color: #4338ca;
+}
